@@ -15,6 +15,10 @@ connection_string = f"mongodb+srv://OnionPowder01:{password}@cluster0.mzjsypb.mo
 client = MongoClient(connection_string)
 digital_portofolio_db = client.digital_portofolio
 
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
 
 @app.route("/publish", methods=["POST"])
 def publish():
