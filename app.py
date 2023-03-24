@@ -7,7 +7,7 @@ from pymongo import MongoClient
 from bson import json_util
 
 app = Flask(__name__)
-CORS(app, origins='https://digital-work-portofolio.netlify.app')
+CORS(app, origins='*')
 
 load_dotenv(find_dotenv())
 password = os.environ.get("MONGODB_PWD")
